@@ -15,7 +15,9 @@ class ListsController < ApplicationController
         if @list.save
             redirect_to lists_path
         else
-            redirect_to lists_path
+            # redirect_to lists_path
+            @lists = List.all.reverse
+            render :index
         end
     end
 

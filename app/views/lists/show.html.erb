@@ -2,7 +2,7 @@
 	<header class="header">
 		<h1><%= @list.name.chomp("List") %></h1> 
         <%= form_for([@list, @item]) do |f| %>
-			<%= f.text_field :description, placeholder: "Add a new item...", class: "new-todo" %>
+			<%= f.text_field :description, placeholder: @item.errors.full_messages_for(:description).first || "enter a new item...", class: "new-todo" %>
 			<%end %>
 	</header>
 
