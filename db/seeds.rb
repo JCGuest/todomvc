@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+a = List.create(name: "Shopping List")
+b = List.create(name: "Gift List")
+c = List.create(name: "Grocery List")
