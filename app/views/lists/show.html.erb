@@ -1,19 +1,23 @@
 <section class="todoapp">
 	<header class="header">
 		<h1><%= @list.name.chomp("List") %></h1> 
-        	<input class="new-todo" placeholder="Add an item..." autofocus="">
+        <%= form_for([@list, @item]) do |f| %>
+			<%= f.text_field :description, placeholder: "Add a new item...", class: "new-todo" %>
+			<%end %>
 	</header>
 
+  <% if @list.items.all.first %>
 	<section class="main">
     	<ul class="todo-list">
-            <li>
-                <div class="view">
-                <label>shoes</label>
-                </div>    
-            </li>
-        </ul>    
+            <%   @list.items.reverse.each do |item|%>
+                <li>
+                    <div class="view">
+                    <label><%= item.description %></label>
+                    </div>    
+                </li>
+                <%end %>
+        </ul>   
 	</section>
+       <%end %> 
 
-	<footer class="footer">
-	</footer>
 </section>
