@@ -19,5 +19,10 @@
         </ul>   
 	</section>
        <%end %> 
-
+<footer class='info'>
+<p>
+	<h2>Logged in as, <%= current_user.email %></h2>
+  <h2><%= link_to "Back to your lists", lists_path %></h2>
+</p>
+</footer>
 </section>

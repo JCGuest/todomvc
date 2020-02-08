@@ -7,7 +7,6 @@ class ItemsController < ApplicationController
       redirect_to list_path(@list)
     else
       render 'lists/show'
-      # redirect_to list_path(@list)
     end
   end
 

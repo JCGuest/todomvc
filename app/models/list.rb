@@ -3,4 +3,5 @@ class List < ApplicationRecord
     uniqueness: { case_sensitive: false }, 
     length: {maximum: 20}
     has_many :items
+    belongs_to :user
 end
