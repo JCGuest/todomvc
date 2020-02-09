@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   get '/logout'    => 'sessions#destroy'
   get '/users'     => 'users#create'
-  
+  get '/auth/:provider/callback' => 'sessions#create'
+
   resources :lists do 
     resources :items
   end

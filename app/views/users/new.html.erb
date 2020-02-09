@@ -4,11 +4,12 @@
 		<%= form_for @user do |f| %>
         <%= f.text_field :email, class: "new-todo", placeholder: "register with your email" %>
         <%= f.text_field :password, class: "new-todo", placeholder: "enter a password", type: "password" %>
-		<%= f.submit type: "hidden"%>
+		<%= f.submit%>
 		<% end %>
 	</header>
 	<footer class="info">
 		<h2>Already have and account? <%= link_to "Log in!", "/login" %>
+		<h2><%= link_to('Log in with Facebook!', '/auth/facebook') %><h2>
 	</footer>
 
 </section>
