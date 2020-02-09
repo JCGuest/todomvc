@@ -2,9 +2,11 @@
 	<header class="header">
 		<h1>Login</h1>
 		<%= form_tag(sessions_path) do %>
-        <%= text_field_tag :email, '', :class => "new-todo", placeholder: "email" %>
-        <%= text_field_tag :password, '', :class => "new-todo", placeholder: "password" %>
+        <%= text_field_tag :email, '', class: "new-todo", placeholder: "email" %>
+        <%= text_field_tag :password, '', class: "new-todo", placeholder: "password", type: "password" %>
+        <div style="visibility: hidden">
         <%= submit_tag %>
+        </div>
         <% end %>
 	</header>
 </section>

@@ -2,11 +2,13 @@
 	<header class="header">
 		<h1>Sign Up</h1>
 		<%= form_for @user do |f| %>
-        <%= f.text_field :email, :class => "new-todo", placeholder: "register with your email" %>
-        <%= f.text_field :password, :class => "new-todo", placeholder: "enter a password" %>
-		<%= f.submit %>
+        <%= f.text_field :email, class: "new-todo", placeholder: "register with your email" %>
+        <%= f.text_field :password, class: "new-todo", placeholder: "enter a password", type: "password" %>
+		<%= f.submit type: "hidden"%>
 		<% end %>
 	</header>
-
+	<footer class="info">
+		<h2>Already have and account? <%= link_to "Log in!", "/login" %>
+	</footer>
 
 </section>
